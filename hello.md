@@ -99,7 +99,52 @@ update_info 內的 Hash 定義了模組的元數據，包括：
 msf> reload_all
 ```
 ## 測試模組
-- 使用 search 命令來查找你的模組，然後使用 use 命令來嘗試加載它。
+- 使用 search 命令來查找模組，然後使用 use 命令來嘗試加載它。
 ```
 msf> search hello
 ```
+- 查找結果
+```
+Matching Modules
+================
+
+   #   Name                                               Disclosure Date  Rank       Check  Description
+   -   ----                                               ---------------  ----       -----  -----------
+   0   exploit/multi/http/jira_plugin_upload              2018-02-22       excellent  Yes    Atlassian Jira Authenticated Upload Code Execution
+   1   exploit/multi/http/baldr_upload_exec               2018-12-19       excellent  Yes    Baldr Botnet Panel Shell Upload Exploit
+   2     \_ target: Auto                                  .                .          .      .
+   3     \_ target: <= v2.0                               .                .          .      .
+   4     \_ target: v2.2                                  .                .          .      .
+   5     \_ target: v3.0 & v3.1                           .                .          .      .
+   6   auxiliary/scanner/etcd/open_key_scanner            2018-03-16       normal     No     Etcd Keys API Information Gathering
+   7   auxiliary/scanner/etcd/version                     2018-03-16       normal     No     Etcd Version Scanner
+   8   auxiliary/scanner/kademlia/server_info             .                normal     No     Gather Kademlia Server Information
+   9     \_ action: BOOTSTRAP                             .                .          .      Use a Kademlia2 BOOTSTRAP
+   10    \_ action: PING                                  .                .          .      Use a Kademlia2 PING
+   11  auxiliary/hello                                    .                normal     No     Hello World
+   12  exploit/multi/browser/java_jre17_jaxws             2012-10-16       excellent  No     Java Applet JAX-WS Remote Code Execution
+   13    \_ target: Generic (Java Payload)                .                .          .      .
+   14    \_ target: Windows Universal                     .                .          .      .
+   15    \_ target: Linux x86                             .                .          .      .
+   16  auxiliary/dos/windows/games/kaillera               2011-07-02       normal     No     Kaillera 0.86 Server Denial of Service
+   17  exploit/linux/http/kaltura_unserialize_cookie_rce  2017-09-12       excellent  Yes    Kaltura Remote PHP Code Execution over Cookie
+   18  exploit/windows/mssql/ms02_056_hello               2002-08-05       good       Yes    MS02-056 Microsoft SQL Server Hello Overflow
+   19  auxiliary/scanner/scada/modbus_banner_grabbing     .                normal     No     Modbus Banner Grabbing
+   20  exploit/linux/mysql/mysql_yassl_hello              2008-01-04       good       No     MySQL yaSSL SSL Hello Message Buffer Overflow
+   21  exploit/windows/mysql/mysql_yassl_hello            2008-01-04       average    No     MySQL yaSSL SSL Hello Message Buffer Overflow
+   22    \_ target: MySQL 5.0.45-community-nt             .                .          .      .
+   23    \_ target: MySQL 5.1.22-rc-community             .                .          .      .
+   24  auxiliary/dos/ssl/dtls_changecipherspec            2000-04-26       normal     No     OpenSSL DTLS ChangeCipherSpec Remote DoS
+   25  auxiliary/dos/ssl/dtls_fragment_overflow           2014-06-05       normal     No     OpenSSL DTLS Fragment Buffer Overflow DoS
+   26  exploit/windows/local/unquoted_service_path        2001-10-25       great      Yes    Windows Unquoted Service Path Privilege Escalation
+
+```
+- 可以看到，第11個就是自己寫的模組，使用 use 命令去使用它
+```
+msf6 > use 11
+```
+- 以下就是進入模組的樣子
+```
+msf6 auxiliary(hello) >
+```
+
