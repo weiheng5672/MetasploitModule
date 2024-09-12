@@ -1,4 +1,4 @@
 # 練習 Metasploit Module 
 
-- 第一個模組，在Metasploit Consloe中顯示Hello
+- 第一個模組， Metasploit 模組開發的 "Hello World" 範例
   
