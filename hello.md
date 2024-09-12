@@ -199,3 +199,37 @@ Basic options:
 - RHOSTS 和 RPORT 是 Metasploit 自動生成的基本選項，這些是沒有在模組中明確指定的。
 - 即使模組只是打印一行文字，Metasploit 仍然會顯示這些選項。
 - 因為 Msf::Auxiliary 類別會自動包含這些基本選項。
+## 使用模組
+```
+msf6 auxiliary(hello) > show options
+```
+```
+Module options (auxiliary/hello):                                                                                                                             
+                                                                                                                                                              
+   Name    Current Setting  Required  Description                                                                                                             
+   ----    ---------------  --------  -----------                                                                                                             
+   RHOSTS                   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html                  
+   RPORT                    yes       The target port (TCP)                                                                                                   
+```
+```
+msf6 auxiliary(hello) > set RHOSTS 172.30.1.21
+```
+```
+RHOSTS => 172.30.1.21
+```
+```
+msf6 auxiliary(hello) > set RPORT 80
+```
+```
+RPORT => 80
+```
+```
+msf6 auxiliary(hello) > run
+```
+```
+[*] Running module against 172.30.1.21
+
+Hello
+[*] Auxiliary module execution completed
+```
+
