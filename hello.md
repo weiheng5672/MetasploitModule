@@ -147,4 +147,32 @@ msf6 > use 11
 ```
 msf6 auxiliary(hello) >
 ```
+- 查看一下 info 
+```
+msf6 auxiliary(hello) > info
+```
+- 查看結果
+```
+
+       Name: Hello World
+     Module: auxiliary/hello
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+
+Provided by:
+  WeiHeng
+
+Check supported:
+  No
+
+Basic options:
+  Name    Current Setting  Required  Description
+  ----    ---------------  --------  -----------
+  RHOSTS                   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+  RPORT                    yes       The target port (TCP)
+
+Description:
+  This module simply prints "Hello".
+
+```
 
