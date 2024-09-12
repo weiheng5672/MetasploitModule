@@ -200,9 +200,11 @@ Basic options:
 - 即使模組只是打印一行文字，Metasploit 仍然會顯示這些選項。
 - 因為 Msf::Auxiliary 類別會自動包含這些基本選項。
 ## 使用模組
+- 輸入show options指令查看需要輸入什麼選項
 ```
 msf6 auxiliary(hello) > show options
 ```
+- 查看結果
 ```
 Module options (auxiliary/hello):                                                                                                                             
                                                                                                                                                               
@@ -211,21 +213,27 @@ Module options (auxiliary/hello):
    RHOSTS                   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html                  
    RPORT                    yes       The target port (TCP)                                                                                                   
 ```
+- 設定 RHOSTS ，隨便設一個IP
 ```
 msf6 auxiliary(hello) > set RHOSTS 172.30.1.21
 ```
+- 返回設定結果
 ```
 RHOSTS => 172.30.1.21
 ```
+- 設定 RPORT ，隨便設一個端口
 ```
 msf6 auxiliary(hello) > set RPORT 80
 ```
+- 返回設定結果
 ```
 RPORT => 80
 ```
+- 執行模組
 ```
 msf6 auxiliary(hello) > run
 ```
+- 執行結果
 ```
 [*] Running module against 172.30.1.21
 
