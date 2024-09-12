@@ -100,3 +100,6 @@ msf> reload_all
 ```
 ## 測試模組
 - 使用 search 命令來查找你的模組，然後使用 use 命令來嘗試加載它。
+```
+msf> search hello
+```
