@@ -175,4 +175,27 @@ Description:
   This module simply prints "Hello".
 
 ```
+## 模組的詳細信息
+- 當使用 info 指令查看模組信息時，Metasploit 框架會顯示模組的詳細信息。
+- 這些信息來自於模組代碼中的 update_info 方法和 Metasploit 的默認行為。
+- 模組排名:默認設置為 Normal，這表示模組的風險和使用優先級。
+```
+Rank: Normal
+```
+- 檢查支持:如果模組不支持任何檢查或不需要檢查，這會顯示為 No。
+```
+Check supported:
+  No
+```
+### 基本選項:
+```
+Basic options:
+  Name    Current Setting  Required  Description
+  ----    ---------------  --------  -----------
+  RHOSTS                   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+  RPORT                    yes       The target port (TCP)
 
+```
+- RHOSTS 和 RPORT 是 Metasploit 自動生成的基本選項，這些是沒有在模組中明確指定的。
+- 即使模組只是打印一行文字，Metasploit 仍然會顯示這些選項。
+- 因為 Msf::Auxiliary 類別會自動包含這些基本選項。
