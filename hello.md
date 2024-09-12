@@ -85,3 +85,18 @@ update_info 內的 Hash 定義了模組的元數據，包括：
 ```
 - run 方法是模組的核心部分，當你運行模組時，Metasploit 會調用這個方法。
 - 在這個簡單的範例中，run 方法僅僅是打印 "Hello" 到控制台。
+
+# 在Metasploit Console導入使用者自定義模組
+## 檢查文件位置
+- User module 預設放在 ~/.msf4/modules/ 目錄底下
+- 確保模組文件放置在正確的目錄中。
+- 對於用戶自定義模組，應該放在 ~/.msf4/modules/ 目錄下的適當子目錄中。
+- 例如，如果是輔助模組，應放在 ~/.msf4/modules/auxiliary/。
+## 重新加載 Metasploit
+- 有時候 Metasploit 需要重新加載所有模組才能識別新添加的模組。
+- 在Metasploit Console中使用以下命令重新加載所有模組：
+```
+msf> reload_all
+```
+## 測試模組
+- 使用 search 命令來查找你的模組，然後使用 use 命令來嘗試加載它。
