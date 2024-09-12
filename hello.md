@@ -233,7 +233,7 @@ RPORT => 80
 ```
 msf6 auxiliary(hello) > run
 ```
-- 執行結果
+* 執行結果
 ```
 [*] Running module against 172.30.1.21
 
