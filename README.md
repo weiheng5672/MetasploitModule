@@ -1,6 +1,4 @@
-# 這是標題
+# 練習 Metasploit Module 
 
-這是一段普通文本，可以包含 **粗體** 和 *斜體*。
-
-- 這是一個無序列表項目
-- 另一個項目
+- 第一個模組，在Metasploit Consloe中顯示Hello
+  
